@@ -3,10 +3,10 @@
 
 .card{
     float:left;
-    height: 400px;
+    /* height: 400px; */
     width: calc(33% - 4px);
     text-align: center;
-    overflow:hidden;
+    /* overflow:hidden; */
     background-color: orange;
     margin: 2px;
     box-sizing: border-box;

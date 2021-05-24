@@ -28,11 +28,16 @@
     <div class="card">
     <p class="title">{{title}}</p>
     <img src={{thumbnail}} height="300px" onError="this.onerror=null;this.src='/download.jpg';" >
-
+        <div id="list-ingredient">
+     {{#each ingredients}}
+                  <h6>{{this}}</h6>
+    {{/each}}
+        </div>
+        <a href={{href}}> video link</a>
         </div>
        
         {{/each}}
-    </script>
+        </script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script> -->
     <!-- <script src="/jquery/dist/jquery.js"></script> -->
 
