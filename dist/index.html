@@ -12,17 +12,24 @@
 
 <body>
     <div class="search-container">
-        <input type="text" id="book-input" class="form__input" placeholder="enter your team name  ">
-        <div id="getTeam" class="btn">search</div>
-        <div id="dreamTeam" class="btn">DreamTeam</div>
+        <input type="text" id="recipe-input" class="form__input" placeholder="enter your ingredient name  ">
+        <div id="getIngredent" class="btn">search</div>
+    </div>
+    <div id="container">
+
+
 
     </div>
-    <div id="container"></div>
 
 
 
-    <script id="player-template" type="text/x-handlebars-template">
-        {{#each players}}
+    <script id="recipe-template" type="text/x-handlebars-template">
+        {{#each recipes}}
+    <div class="card">
+    <p class="title">{{title}}</p>
+    <img src={{thumbnail}} height="300px" onError="this.onerror=null;this.src='/download.jpg';" >
+
+        </div>
        
         {{/each}}
     </script>
