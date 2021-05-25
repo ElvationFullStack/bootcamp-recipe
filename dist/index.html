@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Recipes</title>
 </head>
 
 <body>
@@ -15,35 +16,50 @@
         <input type="text" id="recipe-input" class="form__input" placeholder="enter your ingredient name  ">
         <div id="getIngredent" class="btn">search</div>
     </div>
-    <div id="container">
-
-
-
-    </div>
-
-
-
+    <div id="container"></div>
     <script id="recipe-template" type="text/x-handlebars-template">
         {{#each recipes}}
-    <div class="card">
-    <p class="title">{{title}}</p>
-    <img src={{thumbnail}} height="300px" onError="this.onerror=null;this.src='/download.jpg';" >
-        <div id="list-ingredient">
+
+
+        <div id="card"class=" card recipe  col bg-primary text-white">
+            <a class="card-title text-white" >{{title}}</a>
+            <a  class="card-title text-white" href={{href}}> video link</a>
+
+            <img src="{{thumbnail}}" class="card-img-top" />
+            <ul class="ingredients">
+                <p class="card-text">Ingredients : </p>
+              
+
+            {{#each ingredients}}
+                <li>{{this}}</li>
+            {{/each}}
+              
+
+            </ul>
+      </div>
+    {{/each}}
+    </script>
+<!-- 
+    <script id="recipe-template" type="text/x-handlebars-template">
+        {{#each recipes}}
+        <div class="card">
+        <p class="title">{{title}}</p>
+         <img src={{thumbnail}} height="300px" onError="this.onerror=null;this.src='/download.jpg';" >
+    <div id="list-ingredient">
      {{#each ingredients}}
-                  <h6>{{this}}</h6>
+       <h6>{{this}}</h6>
     {{/each}}
         </div>
         <a href={{href}}> video link</a>
         </div>
        
         {{/each}}
-        </script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script> -->
-    <!-- <script src="/jquery/dist/jquery.js"></script> -->
+        </script> -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
     <script src="/handlebars/dist/handlebars.js"></script>
-
     <script src="/jquery/dist/jquery.js"></script>
+    
     <script src="Renderer.js"></script>
     <script src="main.js"></script>
 

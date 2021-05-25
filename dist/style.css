@@ -1,30 +1,38 @@
 
-
-
+a{
+    color: darkmagenta;
+}
+ul{
+    /* max-width: 100px; */
+}
 .card{
     float:left;
-    /* height: 400px; */
-    width: calc(33% - 4px);
+    width: 30%;
+    height: 500px;
     text-align: center;
-    /* overflow:hidden; */
     background-color: orange;
     margin: 2px;
     box-sizing: border-box;
+    overflow-y: scroll;
 }
 img{
     background-color: gray;
 }
+
 .header{
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 #searchInput{
     width: 80%;
 }
+
 #rosterBtn{
     width: 15%;
 }
+
 .title{
     font-size: 15px;
     margin: 5px;
@@ -33,9 +41,6 @@ img{
 .search-container{
     display: flex;
     gap:10px;
-    /* flex-basis:  auto; */
-    /* flex-basis: 100%; */
-    /* justify-content:space-between; */
 
 }
 .form__input {
